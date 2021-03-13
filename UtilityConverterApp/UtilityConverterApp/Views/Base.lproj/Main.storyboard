@@ -84,7 +84,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </collectionViewCellContentView>
                                 <connections>
-                                    <segue destination="rbc-pQ-Yob" kind="show" identifier="goToWeightConversions" id="Lfd-9O-nqA"/>
+                                    <segue destination="AIc-5j-smJ" kind="show" identifier="goToWeightConversions" id="eqS-17-8jR"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -100,20 +100,85 @@
             <point key="canvasLocation" x="-2191" y="2155"/>
         </scene>
         <!--Weight View Controller-->
-        <scene sceneID="luy-cu-JvG">
+        <scene sceneID="Dc2-ZR-ACO">
             <objects>
-                <viewController id="rbc-pQ-Yob" customClass="WeightViewController" customModule="UtilityConverterApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="pVf-ds-R9O">
+                <viewController id="AIc-5j-smJ" customClass="WeightViewController" customModule="UtilityConverterApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kmq-zt-KGH">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="WSu-f0-ctM"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HCg-1p-oXH">
+                                <rect key="frame" x="0.0" y="88" width="428" height="755"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="94l-Oc-dmx">
+                                        <rect key="frame" x="0.0" y="0.0" width="428" height="755"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="eYC-X2-sLQ">
+                                                <rect key="frame" x="15" y="30" width="398" height="632"/>
+                                                <subviews>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uVs-gR-g9r">
+                                                        <rect key="frame" x="0.0" y="0.0" width="398" height="128"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                                        <color key="textColor" systemColor="labelColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MfY-Zd-fhX">
+                                                        <rect key="frame" x="0.0" y="128" width="398" height="470"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jBP-tE-xg6">
+                                                        <rect key="frame" x="0.0" y="598" width="398" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="eYC-X2-sLQ" secondAttribute="bottom" constant="93" id="987-pr-HTU"/>
+                                            <constraint firstItem="eYC-X2-sLQ" firstAttribute="top" secondItem="94l-Oc-dmx" secondAttribute="top" constant="30" id="HES-Gq-zVp"/>
+                                            <constraint firstItem="eYC-X2-sLQ" firstAttribute="leading" secondItem="94l-Oc-dmx" secondAttribute="leading" constant="15" id="OTJ-V6-lwG"/>
+                                            <constraint firstAttribute="trailing" secondItem="eYC-X2-sLQ" secondAttribute="trailing" constant="15" id="wtx-g1-Ok9"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.086274509799999996" green="0.086274509799999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="94l-Oc-dmx" firstAttribute="leading" secondItem="HCg-1p-oXH" secondAttribute="leading" id="I4W-Vq-2cD"/>
+                                    <constraint firstItem="94l-Oc-dmx" firstAttribute="bottom" secondItem="Nev-PM-wv4" secondAttribute="bottom" id="KDw-Ta-zmH"/>
+                                    <constraint firstAttribute="bottom" secondItem="94l-Oc-dmx" secondAttribute="bottom" id="LCC-OC-K7t"/>
+                                    <constraint firstAttribute="trailing" secondItem="94l-Oc-dmx" secondAttribute="trailing" id="pir-Hl-KOe"/>
+                                    <constraint firstItem="94l-Oc-dmx" firstAttribute="top" secondItem="Nev-PM-wv4" secondAttribute="top" id="qXA-H0-uWf"/>
+                                    <constraint firstItem="94l-Oc-dmx" firstAttribute="centerX" secondItem="HCg-1p-oXH" secondAttribute="centerX" id="tcy-En-gOh"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="BuY-Dm-JIj"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Nev-PM-wv4"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8rE-eE-qO7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HCg-1p-oXH" firstAttribute="bottom" secondItem="8rE-eE-qO7" secondAttribute="bottom" id="FmV-SC-kTK"/>
+                            <constraint firstAttribute="trailing" secondItem="HCg-1p-oXH" secondAttribute="trailing" id="VTT-YR-E0A"/>
+                            <constraint firstItem="HCg-1p-oXH" firstAttribute="leading" secondItem="kmq-zt-KGH" secondAttribute="leading" id="den-ih-PvW"/>
+                            <constraint firstItem="HCg-1p-oXH" firstAttribute="top" secondItem="8rE-eE-qO7" secondAttribute="top" id="vqo-gd-CQd"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="dL2-q4-cHB"/>
+                    <navigationItem key="navigationItem" id="mwd-pn-db9"/>
+                    <connections>
+                        <outlet property="aboveKeyboardConstraint" destination="987-pr-HTU" id="xbO-gZ-qeN"/>
+                        <outlet property="contentStackView" destination="eYC-X2-sLQ" id="otq-za-tlM"/>
+                        <outlet property="scrollView" destination="HCg-1p-oXH" id="bZC-bn-MtD"/>
+                        <outlet property="text" destination="MfY-Zd-fhX" id="mim-JE-Ybr"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZQT-yq-RBe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O8I-8J-icD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2191" y="2936"/>
+            <point key="canvasLocation" x="-2191.1214953271028" y="2889.8488120950328"/>
         </scene>
         <!--Conversions-->
         <scene sceneID="D10-Gj-yu9">
@@ -139,6 +204,9 @@
         <image name="baseline_access_time_filled_black_24pt" width="24" height="24"/>
         <image name="baseline_cached_black_24pt" width="24" height="24"/>
         <image name="baseline_settings_black_24pt" width="24" height="24"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
