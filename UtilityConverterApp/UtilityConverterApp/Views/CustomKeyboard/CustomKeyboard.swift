@@ -16,9 +16,6 @@ import UIKit
 
 class CustomKeyboard: UIView {
     
-
-    
-    
     @IBOutlet var buttonZero: UIButton!
     @IBOutlet var buttonOne: UIButton!
     @IBOutlet var buttonTwo: UIButton!
@@ -33,15 +30,17 @@ class CustomKeyboard: UIView {
     @IBOutlet var buttonMinus: UIButton!
     @IBOutlet var buttonDone: UIButton!
     @IBOutlet var buttonClear: UIButton!
+    @IBOutlet var controlKeyView: UIView!
     
     
     weak var delegate: CustomKeyboardDelegate?
     
     var allKeys: [UIButton] { return [buttonZero, buttonOne, buttonTwo, buttonThree, buttonFour, buttonFive, buttonSix, buttonSeven, buttonEight, buttonNine, buttonDot, buttonMinus] }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         initializeKeyboard()
-       // NotificationCenter.default.addObserver(self, selector: #selector(activateMinusButton(notification:)), name: NSNotification.Name(rawValue: "activateMinusButton"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(activateMinusButton(notification:)), name: NSNotification.Name(rawValue: "activateMinusButton"), object: nil)
        
     }
     
@@ -58,6 +57,7 @@ class CustomKeyboard: UIView {
         view.frame = bounds
     }
     private func initializeKeyboardStyles(){
+        controlKeyView.backgroundColor = WeightViewController.conversion.cellColour
         for button in allKeys {
             button.layer.cornerRadius = 25
             button.layer.shadowColor = Constants.Design.Color.shadowColor.cgColor
@@ -92,6 +92,10 @@ class CustomKeyboard: UIView {
         delegate?.clearPressed()
 
     }
+    
+    @objc func activateMinusButton(notification: NSNotification) {
+        buttonMinus.isUserInteractionEnabled = true
+    }
     private func buttonClickAnimation(button:UIButton){
         button.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
         UIView.animate(withDuration: 1,
@@ -114,15 +118,15 @@ class CustomKeyboard: UIView {
 
     }
     private func animateButtonStyles(button:UIButton){
-        button.setTitleColor(Constants.Design.Color.animateButtonTextColor, for: .normal)
-        button.backgroundColor = Constants.Design.Color.animateButtonColor
+        button.setTitleColor(Constants.Design.Color.appWhite, for: .normal)
+        button.backgroundColor = WeightViewController.conversion.cellColour
         button.layer.shadowColor = Constants.Design.Color.animateShadowColor.cgColor
         button.layer.shadowOpacity = 1
         button.layer.shadowRadius = 15
     }
     private func resetButtonStyles(button:UIButton){
         button.setTitleColor(Constants.Design.Color.buttonTextColor, for: .normal)
-        button.backgroundColor = Constants.Design.Color.buttonColor
+        button.backgroundColor = UIColor.white
         button.layer.shadowColor = Constants.Design.Color.shadowColor.cgColor
         button.layer.shadowOpacity = 0.75
         button.layer.shadowRadius = 6

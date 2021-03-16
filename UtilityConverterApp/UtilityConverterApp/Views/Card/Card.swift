@@ -23,7 +23,10 @@ class Card: UICollectionViewCell {
     func setData(lebelText: String,image: UIImage, cardColor: UIColor){
         self.cardLabel.text = lebelText
         self.cardDescription.text = Constants.Content.getConversionCardDescription(unit: lebelText)
+        let bounds = UIScreen.main.bounds
+        let width = bounds.size.width
         self.cardImage.image = image
+        self.cardImage.bounds.size.width = width/4
         self.contentView.backgroundColor = cardColor
     }
     

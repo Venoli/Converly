@@ -11,6 +11,7 @@ import UIKit
 private var numericKeyboardDelegate: CustomKeyboardDelegate?
 
 extension UITextField: CustomKeyboardDelegate {
+   
     func setAsNumericKeyboard(delegate: CustomKeyboardDelegate?) {
         let bounds = UIScreen.main.bounds
         let height = bounds.size.height

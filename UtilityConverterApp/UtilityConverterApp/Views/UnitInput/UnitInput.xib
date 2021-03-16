@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="UnitInput" id="Gxj-6x-hR6" customClass="UnitInput" customModule="UtilityConverterApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="514" height="117"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2I8-DN-lUC">
+                <rect key="frame" x="0.0" y="0.0" width="514" height="117"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="T7d-QI-byX">
+                        <rect key="frame" x="51.333333333333343" y="23.333333333333336" width="411.33333333333326" height="70.333333333333314"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Lq8-fi-QT8">
+                                <rect key="frame" x="0.0" y="0.0" width="411.33333333333331" height="22"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Label">
+                                        <attributes>
+                                            <font key="NSFont" size="19" name="Helvetica-Bold"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5u6-Mi-ww7">
+                                <rect key="frame" x="0.0" y="32" width="411.33333333333331" height="38.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="editingChanged:" destination="Gxj-6x-hR6" eventType="editingChanged" id="Xxe-bP-kzA"/>
+                                    <action selector="editingDidEnd:" destination="Gxj-6x-hR6" eventType="editingDidEnd" id="iQ3-lX-mZS"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="T7d-QI-byX" firstAttribute="centerX" secondItem="2I8-DN-lUC" secondAttribute="centerX" id="Qpd-BT-oCf"/>
+                    <constraint firstItem="T7d-QI-byX" firstAttribute="centerY" secondItem="2I8-DN-lUC" secondAttribute="centerY" id="VYB-CU-7ui"/>
+                    <constraint firstItem="T7d-QI-byX" firstAttribute="height" secondItem="2I8-DN-lUC" secondAttribute="height" multiplier="0.6" id="gs6-rP-iVG"/>
+                    <constraint firstItem="T7d-QI-byX" firstAttribute="width" secondItem="2I8-DN-lUC" secondAttribute="width" multiplier="0.8" id="xyE-5K-EeS"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="514" height="117"/>
+            <connections>
+                <outlet property="amount" destination="5u6-Mi-ww7" id="fub-SJ-x7I"/>
+                <outlet property="card" destination="2I8-DN-lUC" id="eJ4-9E-3KU"/>
+                <outlet property="unitName" destination="Lq8-fi-QT8" id="L6H-X2-Q2d"/>
+            </connections>
+            <point key="canvasLocation" x="-74.299065420560737" y="-39.8488120950324"/>
+        </collectionViewCell>
+    </objects>
+</document>

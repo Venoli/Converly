@@ -10,36 +10,41 @@ import UIKit
 class WeightViewController: UIViewController,CustomKeyboardDelegate {
     
     @IBOutlet weak var aboveKeyboardConstraint: NSLayoutConstraint!
-    @IBOutlet weak var text: UITextField!
     @IBOutlet weak var contentStackView: UIStackView!
     @IBOutlet weak var scrollView: UIScrollView!
-    
-    
-    override func viewDidLoad() {
-        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(keyboardWillHide)))
-
-    }
+    @IBOutlet weak var viewHeading: UILabel!
+    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var conversionIcon: UIImageView!
+    @IBOutlet weak var saveButtom: UIBarButtonItem!
     var activeTextField = UITextField()
+    static var conversion = Conversion()
 
 
+    override func viewDidLoad() {
+  view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(keyboardWillHide)))
+    setupUI()
+       // self.view.backgroundColor = Constants.Design.Color.appWhite
+        //saveButtom.isEnabled = false
+    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-                
-        /// setting custom numeric keyboard
-        setCustomNumericKeyboard()
+     
     }
-    func setCustomNumericKeyboard() {
-        text.setAsNumericKeyboard(delegate: self)
-        
-        
-        /// Obser which tracks the keyboard show event
+ 
+    func setupUI() {
+        viewHeading.text = WeightViewController.conversion.getName()
+        viewHeading.textColor = WeightViewController.conversion.getCellColour()
+        conversionIcon.image = WeightViewController.conversion.getIcon()
+    }
+    
+    func setCustomNumericKeyboard(textField:UITextField) {
+        textField.setAsNumericKeyboard(delegate: self)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)),
                                                name: UIResponder.keyboardWillShowNotification, object: nil)
     }
     
     @objc func keyboardWillHide() {
         view.endEditing(true)
-        
         UIView.animate(withDuration: 0.25, animations: {
             self.aboveKeyboardConstraint.constant = 10.0
             self.view.layoutIfNeeded()
@@ -67,7 +72,7 @@ class WeightViewController: UIViewController,CustomKeyboardDelegate {
         print("Symbol \(symbol) pressed!")
     }
     func donePressed() {
-        print("Done pressed!")
+        keyboardWillHide()
     }
     
     func clearPressed() {
@@ -87,9 +92,9 @@ class WeightViewController: UIViewController,CustomKeyboardDelegate {
                 let keyboard: CGRect = info["UIKeyboardFrameEndUserInfoKey"] as! CGRect
                 let targetY = view.frame.size.height - keyboard.height - 15 - activeTextField.frame.size.height
                 let initialY = contentStackView.frame.origin.y + activeTextFieldSuperView.frame.origin.y + activeTextField.frame.origin.y
-                
+                var diff:CGFloat = 0
                 if initialY > targetY {
-                    let diff = targetY - initialY
+                    diff = targetY - initialY
                     let targetOffsetForTopConstraint = aboveKeyboardConstraint.constant + diff
                     view.layoutIfNeeded()
                     
@@ -99,10 +104,27 @@ class WeightViewController: UIViewController,CustomKeyboardDelegate {
                     })
                 }
                 
-                var contentInset: UIEdgeInsets = scrollView.contentInset
-                contentInset.bottom = keyboard.size.height
-                scrollView.contentInset = contentInset
+//                let childVC = children[0] as! UnitsCollectionView
+                aboveKeyboardConstraint.constant = keyboard.size.height - aboveKeyboardConstraint.constant - diff
+//                contentInset.bottom = keyboard.size.height
+//                scrollView.contentInset = contentInset
             }
         }
     }
+    
+    @IBAction func saveConversion(_ sender: UIBarButtonItem) {
+        let unitSaves = DataTransfer.toUnitSaveModel(units: WeightViewController.conversion.getUnitsArray())
+        let defaults = UserDefaults.standard
+        let encoder = JSONEncoder()
+        if let encodedConversion = try? encoder.encode(unitSaves){
+            defaults.set(encodedConversion, forKey: WeightViewController.conversion.getName())
+
+        }
+        
+
+    }
+    
 }
+
+
+
