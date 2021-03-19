@@ -21,11 +21,11 @@ class WeightViewController: UIViewController,CustomKeyboardDelegate {
 
 
     override func viewDidLoad() {
-  view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(keyboardWillHide)))
-    setupUI()
-       // self.view.backgroundColor = Constants.Design.Color.appWhite
+        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(keyboardWillHide)))
+        setupUI()
         //saveButtom.isEnabled = false
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
      
@@ -35,6 +35,12 @@ class WeightViewController: UIViewController,CustomKeyboardDelegate {
         viewHeading.text = WeightViewController.conversion.getName()
         viewHeading.textColor = WeightViewController.conversion.getCellColour()
         conversionIcon.image = WeightViewController.conversion.getIcon()
+        if(WeightViewController.conversion.getName() == "Temperature"){
+            Constants.Content.isNegativeKeyActive = true
+
+        }else{
+            Constants.Content.isNegativeKeyActive = false
+        }
     }
     
     func setCustomNumericKeyboard(textField:UITextField) {
@@ -113,17 +119,47 @@ class WeightViewController: UIViewController,CustomKeyboardDelegate {
     }
     
     @IBAction func saveConversion(_ sender: UIBarButtonItem) {
-        let unitSaves = DataTransfer.toUnitSaveModel(units: WeightViewController.conversion.getUnitsArray())
-        let defaults = UserDefaults.standard
-        let encoder = JSONEncoder()
-        if let encodedConversion = try? encoder.encode(unitSaves){
-            defaults.set(encodedConversion, forKey: WeightViewController.conversion.getName())
 
+        print("jjjjjj")
+        keyboardWillHide()
+        //Set focused text field's unit value
+        if let value = Double(activeTextField.text!){
+            WeightViewController.conversion.getUnitsArray()[activeTextField.tag].setValue(value: value)
         }
+      
+
         
 
+        var previouseConversionSaves =  DataTransfer.retrieveHistories(key: WeightViewController.conversion.getName())
+
+        let conversionSave = DataTransfer.toConversionSaveModel(conversion: WeightViewController.conversion)
+
+        
+        if previouseConversionSaves.count >= Constants.Content.Numeric.MAX_USER_DEFAULTS {
+                previouseConversionSaves = Array(previouseConversionSaves.suffix(Constants.Content.Numeric.MAX_USER_DEFAULTS - 1))
+            }
+        previouseConversionSaves.append(conversionSave)
+        do
+        {
+            UserDefaults.standard.set(try PropertyListEncoder().encode(previouseConversionSaves), forKey: WeightViewController.conversion.getName())
+            
+            let alert = UIAlertController(title: "Success", message: "The \(WeightViewController.conversion.getName()) conversion was successully saved!", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+        }
+        catch
+        {
+            print(error.localizedDescription)
+            let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: UIAlertController.Style.alert)
+               alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+               self.present(alert, animated: true, completion: nil)
+        }
+
+             
+           
+
     }
-    
+
 }
 
 

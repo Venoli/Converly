@@ -16,9 +16,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Wn-1I-MFG">
-                                <rect key="frame" x="156" y="303" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon" translatesAutoresizingMaskIntoConstraints="NO" id="d88-nb-mzz">
+                                <rect key="frame" x="140" y="273" width="134" height="60"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Tfn-PY-tXr">
+                                <rect key="frame" x="158" y="350" width="98" height="32.5"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Converly">
+                                        <attributes>
+                                            <color key="NSColor" red="0.70588235294117641" green="0.14117647058823529" blue="0.38431372549019605" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="25" name="MarkerFelt-Wide"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developed by Venoli Gamage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjz-aC-xh5">
+                                <rect key="frame" x="95.5" y="773" width="223" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -26,14 +41,26 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Tfn-PY-tXr" firstAttribute="top" secondItem="d88-nb-mzz" secondAttribute="bottom" constant="17" id="3aO-3a-vpV"/>
+                            <constraint firstItem="d88-nb-mzz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="229" id="4yQ-FF-Mkd"/>
+                            <constraint firstItem="Tfn-PY-tXr" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="EGt-7E-M7I"/>
+                            <constraint firstItem="hjz-aC-xh5" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="QbA-6e-x9B"/>
+                            <constraint firstItem="d88-nb-mzz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="140" id="aek-y9-XOm"/>
+                            <constraint firstItem="d88-nb-mzz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="229" id="bxD-vm-iQi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="d88-nb-mzz" secondAttribute="trailing" constant="140" id="dIv-by-zEF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hjz-aC-xh5" secondAttribute="bottom" constant="68" id="eZd-x0-y2D"/>
+                            <constraint firstItem="d88-nb-mzz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hXC-jX-Vbr"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Icon" width="60" height="60"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -4,6 +4,8 @@
 //
 //  Created by Venoli Gamage on 2021-03-09.
 //
+// MARK: Can be added to seperate files for better readability
+
 import Foundation
 import UIKit
 
@@ -15,20 +17,28 @@ struct Constants{
             static let animateShadowColor = #colorLiteral(red: 0.3176470588, green: 0.7294117647, blue: 0.9921568627, alpha: 1)
             static let animateButtonColor = #colorLiteral(red: 0.1882352941, green: 0.7215686275, blue: 0.7019607843, alpha: 1)
             static let buttonTextColor = #colorLiteral(red: 0.07058823529, green: 0.4745098039, blue: 0.6941176471, alpha: 1)
- //F6F7FB s
+            static let appColor = #colorLiteral(red: 0.7058823529, green: 0.1411764706, blue: 0.3843137255, alpha: 1)
+            static let appColorLight = #colorLiteral(red: 0.8784313725, green: 0.7568627451, blue: 0.8156862745, alpha: 1)
+            static let appFontColor =  #colorLiteral(red: 0.1058823529, green: 0.3137254902, blue: 0.4980392157, alpha: 1)
+
         }
         struct Font{
             
-            
+            static let appFontAttribute = [ NSAttributedString.Key.font: UIFont(name: "Helvetica-Bold", size: 16)! ]
+
         }
 
         
     }
     struct Content{
         static var conversions = [Conversion]()
+        static var precisions = [Precision]()
+        static var isNegativeKeyActive = false
+        static var isSaveEnabled = false
         static func getConversionCardDescription(unit: String)->String{
         return "Unit conversions among \(unit) units"
         }
+        
         
         static func initConversions(){
             
@@ -54,7 +64,28 @@ struct Constants{
             conversions += [weight, temperature, length, speed, volume, liquidVolume]
 
         }
+        
+       static func initPrecisions(){
+        let twoDecimals = Precision(name: "Two Decimal Points", value: 100.0)
+        let threeDecimals = Precision(name: "Three Decimal Points", value: 1000.0)
+        let fourDecimals = Precision(name: "Four Decimal Points", value: 10000.0)
+            
+            precisions += [twoDecimals, threeDecimals, fourDecimals]
+        
+       }
+        
+        
+        struct Strings{
+
+        }
+        
+        struct Numeric{
+            static let MAX_USER_DEFAULTS = 5
+            static var CURRENT_PRECISION = 100.0
+        }
+
     }
+    
 
     
 }

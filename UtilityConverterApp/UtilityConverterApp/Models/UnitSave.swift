@@ -7,20 +7,26 @@
 
 import UIKit
 //MARK: Conversion Model 
-class UnitSave: Encodable {
+class UnitSave: Codable {
     let name: String
-    var value: String
-    init(name: String, value: String) {
+    let value: Double
+    let symbol: String
+    
+    init(name: String, value: Double, symbol: String) {
         self.name = name
         self.value = value
+        self.symbol = symbol
     }
     
     func getName() -> String {
         return name
     }
     
-    func getValue() -> String {
+    func getValue() -> Double {
         return value
     }
 
+    func getSymbol() -> String {
+        return symbol
+    }
 }

@@ -7,7 +7,7 @@
 
 import UIKit
 //MARK: ConversionSave Model
-class ConversionSave {
+class ConversionSave: Codable {
     let name: String
     var unitSaveArray:[UnitSave]
 

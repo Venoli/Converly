@@ -16,6 +16,10 @@
 		915C6F8A25FDB28F00D6B31B /* UnitsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915C6F8925FDB28F00D6B31B /* UnitsCollectionView.swift */; };
 		915C6F8E25FDF11000D6B31B /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915C6F8D25FDF11000D6B31B /* Unit.swift */; };
 		915C6F9725FE603D00D6B31B /* CurrentUnitsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915C6F9625FE603D00D6B31B /* CurrentUnitsCollectionView.swift */; };
+		9164890C2601CFDC009C9CD3 /* HistoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9164890B2601CFDC009C9CD3 /* HistoryCard.swift */; };
+		916489102601CFE8009C9CD3 /* HistoryCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9164890F2601CFE8009C9CD3 /* HistoryCard.xib */; };
+		9164892226025211009C9CD3 /* Precision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9164892126025211009C9CD3 /* Precision.swift */; };
+		9164892A2602F6A0009C9CD3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916489292602F6A0009C9CD3 /* TabBarController.swift */; };
 		917AEEF725F8FCA3003E494B /* CustomKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917AEEF625F8FCA3003E494B /* CustomKeyboard.swift */; };
 		917AEEFB25F8FCD1003E494B /* CustomKeyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 917AEEFA25F8FCD1003E494B /* CustomKeyboard.xib */; };
 		917AEF0E25FA2B55003E494B /* UITextField+CustomKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917AEF0D25FA2B55003E494B /* UITextField+CustomKeyboard.swift */; };
@@ -45,6 +49,10 @@
 		915C6F8925FDB28F00D6B31B /* UnitsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitsCollectionView.swift; sourceTree = "<group>"; };
 		915C6F8D25FDF11000D6B31B /* Unit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
 		915C6F9625FE603D00D6B31B /* CurrentUnitsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUnitsCollectionView.swift; sourceTree = "<group>"; };
+		9164890B2601CFDC009C9CD3 /* HistoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCard.swift; sourceTree = "<group>"; };
+		9164890F2601CFE8009C9CD3 /* HistoryCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryCard.xib; sourceTree = "<group>"; };
+		9164892126025211009C9CD3 /* Precision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Precision.swift; sourceTree = "<group>"; };
+		916489292602F6A0009C9CD3 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		917AEEF625F8FCA3003E494B /* CustomKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomKeyboard.swift; sourceTree = "<group>"; };
 		917AEEFA25F8FCD1003E494B /* CustomKeyboard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomKeyboard.xib; sourceTree = "<group>"; };
 		917AEF0D25FA2B55003E494B /* UITextField+CustomKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+CustomKeyboard.swift"; sourceTree = "<group>"; };
@@ -93,6 +101,15 @@
 				91587C2B25FC8B5A0021D8D2 /* UnitInput.xib */,
 			);
 			path = UnitInput;
+			sourceTree = "<group>";
+		};
+		9164890A2601CFB3009C9CD3 /* HistoryCard */ = {
+			isa = PBXGroup;
+			children = (
+				9164890B2601CFDC009C9CD3 /* HistoryCard.swift */,
+				9164890F2601CFE8009C9CD3 /* HistoryCard.xib */,
+			);
+			path = HistoryCard;
 			sourceTree = "<group>";
 		};
 		917AEEF525F8FC7F003E494B /* CustomKeyboard */ = {
@@ -180,6 +197,7 @@
 				91A316C825F6842800CF8B9B /* SettingsViewController.swift */,
 				91A316CB25F6845400CF8B9B /* HistoryViewController.swift */,
 				9149A74D25F855D300A5706C /* WeightViewController.swift */,
+				916489292602F6A0009C9CD3 /* TabBarController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -187,6 +205,7 @@
 		91B60A0925F0114A005852D8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9164890A2601CFB3009C9CD3 /* HistoryCard */,
 				91587C2625FC8ABE0021D8D2 /* UnitInput */,
 				917AEEF525F8FC7F003E494B /* CustomKeyboard */,
 				91A316D825F7275300CF8B9B /* Card */,
@@ -202,6 +221,7 @@
 				91536DD22600DB3B00EF69CE /* ViewModels */,
 				91536DD62600DFAD00EF69CE /* ConversionSave.swift */,
 				91536DD92600DFBD00EF69CE /* UnitSave.swift */,
+				9164892126025211009C9CD3 /* Precision.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -281,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				91B609FE25EFCDA9005852D8 /* LaunchScreen.storyboard in Resources */,
+				916489102601CFE8009C9CD3 /* HistoryCard.xib in Resources */,
 				91B609FB25EFCDA9005852D8 /* Assets.xcassets in Resources */,
 				91B609F925EFCDA8005852D8 /* Main.storyboard in Resources */,
 				91A316DA25F7277A00CF8B9B /* Card.xib in Resources */,
@@ -298,8 +319,10 @@
 			files = (
 				91B609F225EFCDA8005852D8 /* AppDelegate.swift in Sources */,
 				91B609F425EFCDA8005852D8 /* SceneDelegate.swift in Sources */,
+				9164890C2601CFDC009C9CD3 /* HistoryCard.swift in Sources */,
 				91B7352025F79F4F00FBD700 /* Extentions.swift in Sources */,
 				917AEEF725F8FCA3003E494B /* CustomKeyboard.swift in Sources */,
+				9164892A2602F6A0009C9CD3 /* TabBarController.swift in Sources */,
 				915C6F9725FE603D00D6B31B /* CurrentUnitsCollectionView.swift in Sources */,
 				91587C2825FC8B1E0021D8D2 /* UnitInput.swift in Sources */,
 				915C6F8E25FDF11000D6B31B /* Unit.swift in Sources */,
@@ -313,6 +336,7 @@
 				9149A74E25F855D300A5706C /* WeightViewController.swift in Sources */,
 				917AEF0E25FA2B55003E494B /* UITextField+CustomKeyboard.swift in Sources */,
 				91A316D025F70B2500CF8B9B /* Conversion.swift in Sources */,
+				9164892226025211009C9CD3 /* Precision.swift in Sources */,
 				91536DDA2600DFBD00EF69CE /* UnitSave.swift in Sources */,
 				91A316CC25F6845400CF8B9B /* HistoryViewController.swift in Sources */,
 				91A316C925F6842800CF8B9B /* SettingsViewController.swift in Sources */,

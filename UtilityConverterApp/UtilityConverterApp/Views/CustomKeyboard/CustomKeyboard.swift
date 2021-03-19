@@ -57,9 +57,12 @@ class CustomKeyboard: UIView {
         view.frame = bounds
     }
     private func initializeKeyboardStyles(){
+        buttonMinus.isEnabled = Constants.Content.isNegativeKeyActive
         controlKeyView.backgroundColor = WeightViewController.conversion.cellColour
         for button in allKeys {
-            button.layer.cornerRadius = 25
+            let bounds = UIScreen.main.bounds
+            let height = bounds.size.height
+            button.layer.cornerRadius = height * 0.03
             button.layer.shadowColor = Constants.Design.Color.shadowColor.cgColor
             button.layer.shadowOpacity = 0.75
             button.layer.shadowOffset = .zero
@@ -67,6 +70,14 @@ class CustomKeyboard: UIView {
             button.layer.shadowPath = UIBezierPath(roundedRect: buttonOne.layer.bounds, cornerRadius: 25).cgPath
             button.layer.shouldRasterize = true
             button.layer.rasterizationScale = UIScreen.main.scale
+        
+        }
+        
+        if(buttonMinus.isEnabled){
+            buttonMinus.setTitleColor(Constants.Design.Color.buttonTextColor, for: .normal)
+
+        }else{
+            buttonMinus.setTitleColor(Constants.Design.Color.shadowColor, for: .normal)
         }
     }
     

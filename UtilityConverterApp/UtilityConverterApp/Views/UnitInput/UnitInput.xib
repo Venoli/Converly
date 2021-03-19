@@ -17,10 +17,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="T7d-QI-byX">
-                        <rect key="frame" x="51.333333333333343" y="23.333333333333336" width="411.33333333333326" height="70.333333333333314"/>
+                        <rect key="frame" x="77" y="23.333333333333336" width="360" height="70.333333333333314"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Lq8-fi-QT8">
-                                <rect key="frame" x="0.0" y="0.0" width="411.33333333333331" height="22"/>
+                                <rect key="frame" x="0.0" y="0.0" width="360" height="22"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Label">
                                         <attributes>
@@ -30,8 +30,8 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5u6-Mi-ww7">
-                                <rect key="frame" x="0.0" y="32" width="411.33333333333331" height="38.333333333333343"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5u6-Mi-ww7">
+                                <rect key="frame" x="0.0" y="32" width="360" height="38.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -47,13 +47,14 @@
                     <constraint firstItem="T7d-QI-byX" firstAttribute="centerX" secondItem="2I8-DN-lUC" secondAttribute="centerX" id="Qpd-BT-oCf"/>
                     <constraint firstItem="T7d-QI-byX" firstAttribute="centerY" secondItem="2I8-DN-lUC" secondAttribute="centerY" id="VYB-CU-7ui"/>
                     <constraint firstItem="T7d-QI-byX" firstAttribute="height" secondItem="2I8-DN-lUC" secondAttribute="height" multiplier="0.6" id="gs6-rP-iVG"/>
-                    <constraint firstItem="T7d-QI-byX" firstAttribute="width" secondItem="2I8-DN-lUC" secondAttribute="width" multiplier="0.8" id="xyE-5K-EeS"/>
+                    <constraint firstItem="T7d-QI-byX" firstAttribute="width" secondItem="2I8-DN-lUC" secondAttribute="width" multiplier="0.7" id="xyE-5K-EeS"/>
                 </constraints>
             </collectionViewCellContentView>
             <size key="customSize" width="514" height="117"/>
             <connections>
                 <outlet property="amount" destination="5u6-Mi-ww7" id="fub-SJ-x7I"/>
                 <outlet property="card" destination="2I8-DN-lUC" id="eJ4-9E-3KU"/>
+                <outlet property="stackView" destination="T7d-QI-byX" id="zW0-kR-VpD"/>
                 <outlet property="unitName" destination="Lq8-fi-QT8" id="L6H-X2-Q2d"/>
             </connections>
             <point key="canvasLocation" x="-74.299065420560737" y="-39.8488120950324"/>
