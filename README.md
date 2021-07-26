@@ -6,6 +6,9 @@ Utility Converter App - iPhone - 6COSC004W Mobile Native Application Development
   
 ## Unit Conversions among the below Units
 
+<img src="https://github.com/Venoli/Converly/blob/main/Screenshots/2.png" width="600" height="350" align="right"/>
+
+
 *   ### Mass 
     Kg, grams, ounces, pounds, stone-pounds 
 *   ### Temperature
@@ -19,10 +22,31 @@ Utility Converter App - iPhone - 6COSC004W Mobile Native Application Development
 *   ### Volume units
     Mm3, Cubic Centimeters, Cubic Meters
     
-    <p align="left"><img src="https://github.com/Venoli/Converly/blob/main/Screenshots/2.png" width="600" height="350" />
+<img src="https://github.com/Venoli/Converly/blob/main/Screenshots/7.png" width="200" height="350" align="right">
+<img src="https://github.com/Venoli/Converly/blob/main/Screenshots/6.png" width="200" height="350" align="right">
+<img src="https://github.com/Venoli/Converly/blob/main/Screenshots/5.png" width="200" height="350" align="right">
+<img src="https://github.com/Venoli/Converly/blob/main/Screenshots/4.png" width="200" height="350" align="right">
+<img src="https://github.com/Venoli/Converly/blob/main/Screenshots/3.png" width="200" height="350" align="right">
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+
 ## :fire: Features
   * Convert among below units
-  
-  * Responsive Mosa
+  * Responsive Mosaic Layout
+  * 
   *
   
