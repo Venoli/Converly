@@ -45,8 +45,10 @@ Utility Converter App - iPhone - 6COSC004W Mobile Native Application Development
 
 
 ## :fire: Features
-  * Convert among below units
+  * Convert among units
   * Responsive Mosaic Layout
-  * 
-  *
+  * Able to set the precision
+  * Custom Keyboard
+  * Unique theme for units
+  *  
   
