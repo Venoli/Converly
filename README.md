@@ -67,7 +67,6 @@ Utility Converter App - iPhone - 6COSC004W Mobile Native Application Development
 
 ## :musical_keyboard: Custom Keyboard
   
-<video width="400" controls autoplay>
-    <source src="https://github.com/Venoli/Converly/blob/main/Screenshots/keyboard.mov" type="video/mp4">
-</video>
-  
+<img width="220" height="450" src="https://github.com/Venoli/Converly/blob/main/Screenshots/keyboard.gif">
+
+
