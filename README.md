@@ -43,12 +43,18 @@ Utility Converter App - iPhone - 6COSC004W Mobile Native Application Development
 </br>
 </br>
 
-
+## :bulb: Techniques
+  * Swift
+  * User Defaults
+  * Mosaic Layout
+  * Reuserble Code
+  * Custom Graphics
+  
 ## :fire: Features
   * Convert among units
   * Responsive Mosaic Layout
   * Able to set the precision
   * Custom Keyboard
   * Unique theme for units
-  *  
+  * Keep history of conversions
   
