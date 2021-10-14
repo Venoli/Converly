@@ -37,11 +37,7 @@ Utility Converter App - iPhone - 6COSC004W Mobile Native Application Development
 </br>
 </br>
 </br>
-</br>
-</br>
-</br>
-</br>
-</br>
+
 
 ## :bulb: Techniques
   * Swift
