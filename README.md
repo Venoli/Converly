@@ -1,5 +1,5 @@
 # Converly
-Utility Converter App - iPhone - 
+Utility Converter App </br> iPhone  </br> 
 6COSC004W Mobile Native Application Development(iOS) Coursework01
 
 <p align="center"><img src="https://github.com/Venoli/Converly/blob/main/Screenshots/1.png" width="400" height="400" />
@@ -70,12 +70,12 @@ Utility Converter App - iPhone -
   
 
 
-<img src="https://github.com/Venoli/Converly/blob/main/Screenshots/9.png" width="100" height="175" align="right">
-<img src="https://github.com/Venoli/Converly/blob/main/Screenshots/10.png" width="100" height="175" align="right">
-<img src="https://github.com/Venoli/Converly/blob/main/Screenshots/11.png" width="100" height="175" align="right">
-<img src="https://github.com/Venoli/Converly/blob/main/Screenshots/12.png" width="100" height="175" align="right">
-<img src="https://github.com/Venoli/Converly/blob/main/Screenshots/13.png" width="100" height="175" align="right">
-<img src="https://github.com/Venoli/Converly/blob/main/Screenshots/14.png" width="100" height="175" align="right">
+<img src="https://github.com/Venoli/Converly/blob/main/Screenshots/9.png" width="100" height="175" >
+<img src="https://github.com/Venoli/Converly/blob/main/Screenshots/10.png" width="100" height="175" >
+<img src="https://github.com/Venoli/Converly/blob/main/Screenshots/11.png" width="100" height="175" >
+<img src="https://github.com/Venoli/Converly/blob/main/Screenshots/12.png" width="100" height="175" >
+<img src="https://github.com/Venoli/Converly/blob/main/Screenshots/13.png" width="100" height="175" >
+<img src="https://github.com/Venoli/Converly/blob/main/Screenshots/14.png" width="100" height="175" >
 
 <img width="220" height="450" src="https://github.com/Venoli/Converly/blob/main/Screenshots/keyboard.gif">
 
