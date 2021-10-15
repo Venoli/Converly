@@ -1,5 +1,5 @@
 # Converly
-Utility Converter App </br> iPhone  </br> 
+Utility Converter App for iPhone  </br> 
 6COSC004W Mobile Native Application Development(iOS) Coursework01
 
 <p align="center"><img src="https://github.com/Venoli/Converly/blob/main/Screenshots/1.png" width="400" height="400" />
