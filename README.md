@@ -5,7 +5,7 @@ Utility Converter App for iPhone  </br>
 <p align="center"><img src="https://github.com/Venoli/Converly/blob/main/Screenshots/1.png" width="400" height="400" />
   </br>
 
-#### :video_camera: [Demo & Code explanation Video](https://asips-for-pulsars-astronomy.web.app/)
+#### :video_camera: [Demo & Code explanation Video](https://www.youtube.com/watch?v=DEmTi9qtUws)
 
   
 ## :pushpin: Unit Conversions among the below Units
