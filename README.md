@@ -68,17 +68,42 @@ Utility Converter App </br> iPhone  </br>
 
 ## :musical_keyboard: Custom Keyboard
   
+<img width="220" height="450" src="https://github.com/Venoli/Converly/blob/main/Screenshots/keyboard.gif" align="left">
 
 <div align="right">
 <img src="https://github.com/Venoli/Converly/blob/main/Screenshots/9.png" width="100" height="175" align="right">
 <img src="https://github.com/Venoli/Converly/blob/main/Screenshots/10.png" width="100" height="175" align="right">
 <img src="https://github.com/Venoli/Converly/blob/main/Screenshots/11.png" width="100" height="175" align="right">
+</div>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+<div align="right">
 <img src="https://github.com/Venoli/Converly/blob/main/Screenshots/12.png" width="100" height="175" align="right">
 <img src="https://github.com/Venoli/Converly/blob/main/Screenshots/13.png" width="100" height="175" align="right">
 <img src="https://github.com/Venoli/Converly/blob/main/Screenshots/14.png" width="100" height="175" align="right">
 </div>
-<img width="220" height="450" src="https://github.com/Venoli/Converly/blob/main/Screenshots/keyboard.gif">
 
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+<div align="left">
+  
 ## :hourglass: History
 
 <img src="https://github.com/Venoli/Converly/blob/main/Screenshots/15.png" width="200" height="350">
@@ -86,4 +111,5 @@ Utility Converter App </br> iPhone  </br>
 ## :wrench: Settings
 
 <img src="https://github.com/Venoli/Converly/blob/main/Screenshots/16.png" width="400" height="350">
+</div>
 
